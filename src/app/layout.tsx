@@ -1,7 +1,9 @@
 "use client";
 
-import AppContextProvider from '@/components/appContext'
+import dynamic from 'next/dynamic';
 import './globals.css'
+
+const AppContextProvider = dynamic(() => import('@/components/appContext'), { ssr: false })
 // import type { Metadata } from 'next'
 // import { Inter } from 'next/font/google'
 
